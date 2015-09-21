@@ -6,6 +6,8 @@
 \usepackage{amsmath}
 \usepackage[swedish,english]{babel}
 %\usepackage{svg}
+\usepackage{epsfig}
+\usepackage[usenames,dvipsnames]{pstricks}
 \title{Fysik}
 \author{Jakob Tigerström/Eric Johansson}
 
@@ -247,5 +249,41 @@ En fallskärms hoppare väger med utrustning $62kg$ efter att falskärmen utveck
 Vilka krafter verkar på henne?\newline
 $F_{luftmotstånd} $
 $ Tyngd=62*gN \approx 609N $
+\section{Lutande plan}
+\includegraphics{lutandeplan.eps}\newline
+$ F_g = mg = 2,0*9,82 = 19,64 N $\newline
+$ \sin v = \frac{F_{\parallel}}{F_g} $\newline
+$ 19,64 \sin 25 = \frac{F_{\parallel}}{19,64} = 8,3 N $\newline\newline
+Svar: $ F_{\parallel} \approx 8,3N $
+\section{Newtons andra lag}
+$ F_{res} = ma $
+\subsection{EX1}
+Vi släpper en blomkruka från andra vångingen. Den har massan $2,0kg$
+Hur stor blir accelerationen om vi har en luftmotståndskraft $ F_L = 0,5 N $\newline
+$ F_{res} = 19,64 - 0,5 = 19,14 N $\newline
+$ F_{res} = ma = 2,0a $\newline
+$ 2,0a = 19,14 $\newline
+$ a = \frac{19,14}{2,0} \approx 9,6 m/s^2 $
+\subsection{EX2}
+En gris har massan $8,0 kg$, vill inte följa med på promenaden. Bestäm accelerationen om friktionskoefficienten är 0,6 mot underlaget.\newline
+$ F = 50N $\newline
+$ F_F = \mu F_N = \mu mg = 0,6*8,0*9,82 \approx 47,136 $\newline
+$ F_{res} = 50-47,136 \approx 2,864 N $
+$ F_{res} = ma = 8,0a $\newline
+$ 8,0a = 1,864 $\newline
+$ a = \frac{2,864}{8} \approx 0,36m/s^2 $
+\subsection{EX3}
+En helikopter lyfter en ren med massan $150kg$ med en konstant hastighet uppåtriktad på $2,0m/s$\newline
+\begin{enumerate}
+  \item Bestäm kraften i repen\newline
+  $ F_g = mg = 150*9,82 = 1473N $\newline
+  $ F_{rep} = F_g = 1473N \approx 1500N$\newline
+  \item $ F_g = mg = 1473N $\newline
+  $ F_{res} = ma = 150*2,0 = 300N $\newline
+  $ F_{res} = F_{rep}-F_g = F_{rep}-1473 $\newline
+  $ F_{rep} = 1773N \approx 1800N $\newline
+  
+\end{enumerate}
+
 \end{flushleft}
 \end{document}
