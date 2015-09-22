@@ -332,8 +332,75 @@ En helikopter lyfter en ren med massan $150kg$ med en konstant hastighet uppåtr
   \item $ F_g = mg = 1473N $\newline
   $ F_{res} = ma = 150*2,0 = 300N $\newline
   $ F_{res} = F_{rep}-F_g = F_{rep}-1473 $\newline
-  $ F_{rep} = 1773N \approx 1800N $\newline
-  
+  $ F_{rep} = 1773N \approx 1800N $\newline  
+\end{enumerate}
+\section{Trigonometri}
+$ \sin v = \frac{motstående katet}{närliggande katet} $\newline
+$ \cos v = \frac{närliggande katet}{motstående katet} $\newline
+\subsection{Exempel på nästan allt}
+Ett föremål med massan $5,3kg$ befinner sig på ett lutande plan där friktionstalet mellan föremål och plan är $0,30$.\newline
+Vilken acceleration får föremålet?\newline
+Tyngdkraften: $mg = 5,4*9,82 = 52N$\newline
+$ \cos 25 = \frac{F_{\perp}}{52} $\newline
+$ F_{\perp} = 52 * \cos 25 = 47,2 N $\newline
+$ \sin 25 = \frac{F_{\parallel}}{52} $\newline
+$ F_{\parallel} 52*sin 25 = 22,0 N $\newline
+
+\includegraphics{trigonometri.eps}\newline
+Friktionskraften:\newline
+$ F_f = \mu * F_N = 0,30 * 47,2 = 14,2 N $\newline
+Resultanten: $ F_{\parallel} - F_f $\newline
+$ 22,0 - 14,2 = 7,8 N $\newline
+$ F_{res} = ma $\newline
+$ a = \frac{F_{res}}{m} = \frac{7,8}{5,3} = 1,5 m/s^2 $\newline
+\section{Rörelselagar}
+Konstant acceleration\newline
+$ a = konstant $\newline
+
+\includegraphics{vt_diagram.eps}\newline
+$ a = \frac{\Delta v}{\Delta t} $\newline
+$ a*t = \frac{v-v_0}{t}*t $\newline
+$ at = v-v_0 $\newline
+$ v = v_0tat $\newline
+Förflyttningen ges av arean under grafen.\newline
+$ S = v_0 t+\frac{(v+v_0)*t}{2} = v_0 t +\frac{vt-v_0t}{2} = v_0t+\frac{vt}{2}-\frac{v_0t}{2} $\newline
+$ \frac{v_0t+vt}{2} = \frac{(v_0+v)t}{2} $\newline
+$ S = \frac{v_0t+vt}{2} = \frac{v_0t+(v0+at)t}{s} = \frac{v_0t+v_0t+at^2}{2} = \frac{2v_0t+at^2}{2} = v_0t+\frac{at^2}{2} $\newline\newline
+$ a = \frac{v-v_0}{t} * \frac{S}{S} = \frac{v-v_0}{t} * \frac{\frac{(v_0+v)t}{2}}{s} = \frac{v-v_0t}{2} = \frac{1}{S} $\newline
+$ a2s = (v-v_0)(v+v_0) = v^2-v_0^2 $\newline
+\subsection{EX1}
+Från en bro, 15 m över vattnet släpps en sten. Använd $g\approx 10m/s^2$
+\begin{enumerate}
+  \item När kommer stenen ner?\newline
+  $ v_0 = 0$\newline
+  $ a = g $\newline
+  $ S = v_0t+\frac{at^2}{2} $\newline
+  $ 15 = 0*t+\frac{10t^2}{2} $\newline
+  $ 15 = 5t^2 $\newline
+  $ t^2 = \frac{15}{5} = 3 $\newline
+  $ t = \sqrt{3} \approx 1,7s $
+  \item Vilken fart har den då?
+  $ v = v_0 + at = 0+10*1,7 = 17 m/s $
+  \subsection{EX2}
+  En annan sten kastas från bron med hastigheten 100 m/s rakt uppåt. Använd $g\approx 10m/s^2$
+  \begin{enumerate}
+    \item När kommer stenen ner?\newline
+      $ a = g $\newline
+      $ v_0 = -10,0 m/s $\newline
+      $ S = v_0t+\frac{at^2}{2} $\newline
+      $ 15 = -10t+\frac{10t^2}{2} $\newline
+      $ 15 = -10t+5t^2 $\newline
+      $ 0 = 5t^2-10t-15 $\newline
+      $ \frac{5t^2-10t-15}{5} $\newline
+      $ 0 = t^2-2t-3 $\newline
+      $ t = 1 \pm \sqrt{1^2-(-3)} $\newline 
+      $ t = 1 \pm \sqrt{4} = t = 1 \pm 2 $\newline 
+      $ t = 1 $ eller $ t = 3 $\newline
+    \item Vilken fart har den då?
+    $ v = v_0+at $\newline
+    $ v = -10+10*3 $\newline
+    $ v = 20 m/s $
+  \end{enumerate}
 \end{enumerate}
 \end{flushleft}
 \end{document}
