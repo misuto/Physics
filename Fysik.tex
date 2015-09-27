@@ -6,6 +6,9 @@
 \usepackage{amsmath}
 \usepackage[swedish,english]{babel}
 \usepackage{epsfig}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 %\usepackage[usenames,dvipsnames]{pstricks}
 %\usepackage{svg}
 \title{Fysik}
@@ -21,10 +24,11 @@
   \item Fyll på SI-Systemet
   \item Skriv fler föreläsningar
   \item Strukturera upp föreläsningarna med section/subsection
-  \item Lägg in uppgifts pappren.
-  \item Skriv snyggare i allmänhet.
-  \item Skriv mer om massa enhet.
+  \item Lägg in uppgifts pappren
+  \item Skriv snyggare i allmänhet
+  \item Skriv mer om massa enhet
   \item Gör om grafen i 14.1
+  \item Byt ut alla eps bilder till Tikz kod
 \end{itemize}
 \section{Prefix}
 
@@ -442,11 +446,49 @@ Från en bro, 15 m över vattnet släpps en sten. Använd $g\approx 10m/s^2$
     $ v^2-v_0^2 = 2as $\newline
     $ S = \frac{v^2-v_0^2}{2a} = \frac{35^2-15^2}{2-4} = 125m \approx 130m $
   \end{enumerate}
-  \item En bil bromsarin från $20m/s$ till stillastående($0m/s$), med retardationen $4,0m/s^2$\newline
+  \item En bil bromsar in från $20m/s$ till stillastående($0m/s$), med retardationen $4,0m/s^2$\newline
   Beräkna bromssträckan:\newline
   \includegraphics{broms.eps}\newline
   $ v^2-v_0^2 = 2as $\newline
   $ S = \frac{v^2-v_0^2}{2a} = \frac{0^2-20^2}{2(-4,0)} = 50m $
+  \item Två personer motionslöper. Alf håller den konstanta hastigheten $18km/h$ då han passerar Britta som står stilla. Efter $1,0s$ börjar Britta accellerera med $2,0m/s^2$ i $3,0s$. Därefter är hennes fart konstant - KONTROLLERA.
+  \begin{enumerate}
+    \item Efter hur lång tid hinner britta upp till Alf?\newline
+    Alf $ 5+\frac{(3*5)}{2} = 7,5+5 = 12,5 $\newline
+    Britta $ y = x-4 $
+    
+    \item Hur långt före Britta är Alf som mest?
+      \definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+      \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+      \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+      \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+      \draw [color=cqcqcq,, xstep=0.5cm,ystep=0.5cm] (-0.2887944851407633,-0.2098382659170944) grid (14.235539276588339,6.957191057556219);
+      \draw[->,color=black] (-0.2887944851407633,0.) -- (14.235539276588339,0.);
+      \foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.,13.,14.}
+      \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+      \draw[->,color=black] (0.,-0.2098382659170944) -- (0.,6.957191057556219);
+      \foreach \y in {,1.,2.,3.,4.,5.,6.}
+      \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+      \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+      \clip(-0.2887944851407633,-0.2098382659170944) rectangle (14.235539276588339,6.957191057556219);
+      \fill[dash pattern=on 1pt off 1pt,color=zzttqq,fill=zzttqq,fill opacity=0.04] (0.,5.) -- (3.5,5.) -- (1.,0.) -- (0.,0.) -- cycle;
+      \fill[color=xfqqff,fill=xfqqff,fill opacity=0.04] (4.,6.) -- (15.,6.) -- (15.,5.) -- (3.5,5.) -- cycle;
+      \draw [domain=-0.2887944851407633:14.235539276588339] plot(\x,{(--200.-0.*\x)/40.});
+      \draw (1.,0.)-- (4.,6.);
+      \draw (4.,6.)-- (15.,6.);
+      \draw [dash pattern=on 1pt off 1pt,color=zzttqq] (0.,5.)-- (3.5,5.);
+      \draw [dash pattern=on 1pt off 1pt,color=zzttqq] (3.5,5.)-- (1.,0.);
+      \draw [dash pattern=on 1pt off 1pt,color=zzttqq] (1.,0.)-- (0.,0.);
+      \draw [dash pattern=on 1pt off 1pt,color=zzttqq] (0.,0.)-- (0.,5.);
+      \draw [color=xfqqff] (4.,6.)-- (15.,6.);
+      \draw [color=xfqqff] (15.,6.)-- (15.,5.);
+      \draw [color=xfqqff] (15.,5.)-- (3.5,5.);
+      \draw [color=xfqqff] (3.5,5.)-- (4.,6.);
+      \end{tikzpicture}\newline
+      Räkna röda rutorna som är antalet meter Alf pringer före Britta per sekund.
+      Räkna lila rutor som är antalet meter Britta springer före Alf per sekund.\newline
+      $ 11+\frac{1*0,5}{2} = 11,3m $s
+  \end{enumerate}
 \end{enumerate}
 \end{flushleft}
 \end{document}
